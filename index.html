@@ -87,7 +87,7 @@ footer {
 <body>
 
 <h1>💼 投資 Dashboard | 黃樹榮</h1>
-<div class="subtitle">Sinotrade 9A91-0309038  •  最後更新 2026-08-06 14:42  •  加權指數 44396.70 (-0.48%)</div>
+<div class="subtitle">Sinotrade 9A91-0309038  •  最後更新 2026-08-06 14:51  •  加權指數 44396.70 (-0.48%)</div>
 
 <h2>💯 投資組合健康度</h2>
 <div class="grid">
@@ -228,6 +228,9 @@ footer {
 </div>
 
 <h2>📉 K 線 + 技術分析 (RSI / MA / MACD)</h2>
+<div style="font-size:12px;color:#667;margin-bottom:8px">
+  訊號說明：買進 (5+分) → 偏多 (3-4) → 中性 (1-2) → 偏空 (0~-1) → 賣出 (-2 以下)
+</div>
 <table>
 <thead>
 <tr>
@@ -248,9 +251,118 @@ footer {
 </tbody>
 </table>
 
+<h2>🌡️ 市場情緒雷達</h2>
+<div class="grid">
+    <div class="card">
+        <div class="lbl">綜合情緒指數</div>
+        <div class="val positive">82 / 100</div>
+        <div class="sub">🔥 極度貪婪</div>
+    </div>
+    <div class="card">
+        <div class="lbl">大盤 breadth</div>
+        <div class="val">N/A</div>
+        <div class="sub">上漲家數比例</div>
+    </div>
+    <div class="card">
+        <div class="lbl">VIX 波動</div>
+        <div class="val">15.8</div>
+        <div class="sub">低波動</div>
+    </div>
+    <div class="card">
+        <div class="lbl">加權指數 vs MA20</div>
+        <div class="val">+1.65%</div>
+        <div class="sub">站上</div>
+    </div>
+</div>
+
+<h2>🎯 今日選股推薦</h2>
+<div class="tips">
+    <ul>
+    <li><b>6770</b>（🟢 買進訊號）　現價 66.60　RSI 47.5　分數 6　→ 十字星 (反轉待確認)；📈 紅三兵 (連續上漲動能)；💪 量增紅 K (買盤積極)</li>
+<li><b>3008</b>（🟢 買進訊號）　現價 4575.00　RSI 56.5　分數 6　→ 💪 量增紅 K (買盤積極)</li>
+<li><b>NVDA</b>（🟢 買進訊號）　現價 219.22　RSI 58.9　分數 6　→ 📈 紅三兵 (連續上漲動能)</li>
+<li><b>2454</b>（🟢 買進訊號）　現價 4000.00　RSI 55.9　分數 5　→ 技術面偏多</li>
+<li><b>2882</b>（🟢 買進訊號）　現價 100.50　RSI 56.7　分數 5　→ 十字星 (反轉待確認)</li>
+    </ul>
+</div>
+
+<h2>🤖 AI 委員會今日訊號</h2>
+<table>
+<thead>
+<tr>
+    <th>代號</th><th>名稱</th><th>訊號</th><th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><b>3231</b></td><td>緯創</td><td class=''>🟡 觀望</td><td style='font-size:12px;color:#889'>錯誤: run_committee() got an unexpected keywor</td></tr>
+<tr><td><b>6770</b></td><td>力積電</td><td class=''>🟡 觀望</td><td style='font-size:12px;color:#889'>錯誤: run_committee() got an unexpected keywor</td></tr>
+<tr><td><b>2301</b></td><td>光寶科</td><td class=''>🟡 觀望</td><td style='font-size:12px;color:#889'>錯誤: run_committee() got an unexpected keywor</td></tr>
+<tr><td><b>2330</b></td><td>台積電</td><td class=''>🟡 觀望</td><td style='font-size:12px;color:#889'>錯誤: run_committee() got an unexpected keywor</td></tr>
+<tr><td><b>2454</b></td><td>聯發科</td><td class=''>🟡 觀望</td><td style='font-size:12px;color:#889'>錯誤: run_committee() got an unexpected keywor</td></tr>
+<tr><td><b>2382</b></td><td>廣達</td><td class=''>🟡 觀望</td><td style='font-size:12px;color:#889'>錯誤: run_committee() got an unexpected keywor</td></tr>
+<tr><td><b>2603</b></td><td>長榮</td><td class=''>🟡 觀望</td><td style='font-size:12px;color:#889'>錯誤: run_committee() got an unexpected keywor</td></tr>
+<tr><td><b>2882</b></td><td>國泰金</td><td class=''>🟡 觀望</td><td style='font-size:12px;color:#889'>錯誤: run_committee() got an unexpected keywor</td></tr>
+</tbody>
+</table>
+
+<h2>🏅 綜合選股推薦 (技術 + 委員會 + 情緒加權)</h2>
+<table>
+<thead>
+<tr>
+    <th>#</th><th>代號</th><th>名稱</th><th>技術 /40</th><th>委員會 /30</th>
+    <th>情緒 /30</th><th>總分 /100</th><th>操作建議</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><b>1</b></td><td>6770</td><td>力積電</td><td>40</td><td>15</td><td>20</td><td><b>75</b></td><td>🟢 買進</td></tr>
+<tr><td><b>2</b></td><td>NVDA</td><td>輝達</td><td>40</td><td>15</td><td>20</td><td><b>75</b></td><td>🟢 買進</td></tr>
+<tr><td><b>3</b></td><td>2454</td><td>聯發科</td><td>35</td><td>15</td><td>20</td><td><b>70</b></td><td>🟢 買進</td></tr>
+<tr><td><b>4</b></td><td>2603</td><td>長榮</td><td>35</td><td>15</td><td>20</td><td><b>70</b></td><td>🟢 買進</td></tr>
+<tr><td><b>5</b></td><td>2882</td><td>國泰金</td><td>35</td><td>15</td><td>20</td><td><b>70</b></td><td>🟢 買進</td></tr>
+<tr><td><b>6</b></td><td>2301</td><td>光寶科</td><td>30</td><td>15</td><td>20</td><td><b>65</b></td><td>🟢 買進</td></tr>
+<tr><td><b>7</b></td><td>2330</td><td>台積電</td><td>30</td><td>15</td><td>20</td><td><b>65</b></td><td>🟢 買進</td></tr>
+<tr><td><b>8</b></td><td>3231</td><td>緯創</td><td>25</td><td>15</td><td>20</td><td><b>60</b></td><td>🟡 觀察</td></tr>
+<tr><td><b>9</b></td><td>2382</td><td>廣達</td><td>20</td><td>15</td><td>20</td><td><b>55</b></td><td>🟡 觀察</td></tr>
+</tbody>
+</table>
+
+<h2>📚 K 線形態小辭典（新手速查）</h2>
+<div class="tips">
+    <ul>
+        <li><b>🔨 錘子線</b>：下跌趨勢後，開盤高、收盤高，但盤中下探很深（下影線 = 實體 2 倍以上）。買方在低檔強勢承接 → <b>反彈訊號</b>。</li>
+        <li><b>🎯 吊人線</b>：外觀跟錘子線一樣，但出現在<b>上漲後</b>。上漲末端出現代表買氣後繼無力 → <b>見頂訊號</b>。</li>
+        <li><b>☄️ 流星</b>：開盤低、收盤低，但盤中衝高又被壓回（上影線 = 實體 2 倍以上），出現在上漲後 → <b>見頂反轉訊號</b>。</li>
+        <li><b>🟢 多頭吞噬</b>：前一天黑 K，今天大紅 K「完全包住」前一天實體。買方全面反攻 → <b>強力反彈訊號</b>。</li>
+        <li><b>🔴 空頭吞噬</b>：前一天紅 K，今天大黑 K「完全包住」前一天實體。賣壓爆發 → <b>強力下跌訊號</b>。</li>
+        <li><b>十字星</b>：開盤價 ≈ 收盤價，實體極小。表示多空拉鋸不決 → <b>可能反轉，需下一根確認</b>。</li>
+        <li><b>📈 紅三兵</b>：連續 3 根紅 K，一根比一根高。持續買盤動能 → <b>上漲趨勢確認</b>。</li>
+        <li><b>📉 黑三兵</b>：連續 3 根黑 K，一根比一根低。持續賣壓 → <b>下跌趨勢確認</b>。</li>
+        <li><b>💪 量增紅 K</b>：紅 K 收線且當日成交量比 5 日均量大 50% 以上。買盤積極 → <b>動能強勁</b>。</li>
+        <li><b>⚠️ 量增黑 K</b>：黑 K 收線且爆量。籌碼鬆動賣壓沉重 → <b>該小心</b>。</li>
+    </ul>
+    <p style="margin-top:12px;color:#889;font-size:12px">
+        ⚠️ K 線只是「機率提示」，不是保證。單根 K 線的準確度約 55-65%，配合<b>成交量</b>、<b>趨勢</b>、<b>RSI/MACD</b> 一起看才會有效。
+    </p>
+</div>
+
+<h2>📚 名詞解釋（新手速查）</h2>
+<div class="tips">
+    <ul>
+        <li><b>RSI (相對強弱指標)</b>：0-100。>70 超買（過熱，短線可能拉回），<30 超賣（過冷，短線可能反彈），30-70 中性。</li>
+        <li><b>MA5 / MA20 / MA60</b>：近 5/20/60 日的收盤均價。<b>現價站上均線 = 短/中/長期趨勢向上</b>。</li>
+        <li><b>MACD Histogram</b>：兩條 EMA 的差值柱狀圖。柱狀 &gt; 0 = 動能向上，柱狀 &lt; 0 = 動能向下。</li>
+        <li><b>多頭排列</b>：現價 &gt; MA5 &gt; MA20，短、中期均線都往上，代表趨勢確立。</li>
+        <li><b>Sharpe 比率</b>：報酬 / 風險。&gt; 1 算好，&gt; 2 很好，我們 committee 排名前段的都在 10+。</li>
+        <li><b>Max Drawdown (MDD)</b>：歷史最大回撤，代表<b>你可能會忍受多大的暫時虧損</b>。</li>
+        <li><b>三大法人</b>：外資 + 投信 + 自營商。買賣超正 = 看多，負 = 看空。<b>外資佔比最高，最有指標意義</b>。</li>
+        <li><b>VIX</b>：美股恐慌指數。&lt;20 平靜，20-30 有點緊張，&gt;30 恐慌。</li>
+    </ul>
+</div>
+
 <footer>
-    Generated by generate_my_dashboard.py  •  Powered by Shioaji + yfinance + AI Committee
+    Generated by generate_my_dashboard.py  •  Powered by Shioaji + yfinance + AI Committee + TWSE
     <br>下次更新：cron 10:05 / 12:05 / 13:25（週一至週五）
+    <br>⚠️ 本 Dashboard 為個人研究工具，非投資建議。所有決策風險自負。
 </footer>
 
 </body>
