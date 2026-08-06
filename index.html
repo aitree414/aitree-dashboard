@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>投資 Dashboard | 黃樹榮</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #080c18; color: #e0e6f0; padding: 24px;
+    max-width: 1280px; margin: 0 auto;
+}
+h1 {
+    font-size: 28px; margin-bottom: 4px;
+    background: linear-gradient(135deg, #00d4aa, #00a8ff, #a855f7);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.subtitle { color: #667; font-size: 13px; margin-bottom: 24px; }
+h2 {
+    font-size: 18px; margin: 24px 0 12px 0; color: #e0e6f0;
+    border-left: 3px solid #00d4aa; padding-left: 10px;
+}
+.grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px; margin-bottom: 20px;
+}
+.card {
+    background: linear-gradient(145deg, #111c2e, #0e1726);
+    border: 1px solid #1a2a40; border-radius: 12px; padding: 18px;
+    position: relative; overflow: hidden;
+}
+.card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, #00d4aa, transparent);
+    border-radius: 12px 12px 0 0;
+}
+.card.negative::before { background: linear-gradient(90deg, #ff4757, transparent); }
+.card.warning::before { background: linear-gradient(90deg, #ffb700, transparent); }
+.card .lbl {
+    font-size: 10px; color: #667; text-transform: uppercase;
+    letter-spacing: .5px; margin-bottom: 6px;
+}
+.card .val { font-size: 24px; font-weight: 600; }
+.card .sub { font-size: 11px; color: #556; margin-top: 4px; }
+.positive { color: #00d4aa; }
+.negative { color: #ff4757; }
+.warning { color: #ffb700; }
+table {
+    width: 100%; border-collapse: collapse;
+    background: #0e1726; border-radius: 12px; overflow: hidden;
+    margin-bottom: 20px;
+}
+th {
+    background: #111c2e; color: #667; font-size: 11px;
+    text-transform: uppercase; letter-spacing: .5px; padding: 10px;
+    text-align: left; border-bottom: 1px solid #1a2a40;
+}
+td { padding: 12px 10px; border-bottom: 1px solid #1a2a40; font-size: 14px; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(255,255,255,0.02); }
+.tips {
+    background: linear-gradient(135deg, rgba(0,168,255,.08), rgba(168,85,247,.05));
+    border: 1px solid #1a2a40; border-radius: 12px; padding: 18px;
+    margin-bottom: 24px;
+}
+.tips ul { list-style: none; }
+.tips li {
+    padding: 10px 0; border-bottom: 1px solid #1a2a40;
+    font-size: 14px; line-height: 1.6;
+}
+.tips li:last-child { border-bottom: none; }
+.tag {
+    display: inline-block; padding: 2px 8px; border-radius: 4px;
+    font-size: 10px; font-weight: 600;
+    background: #1a2a40; color: #e0e6f0;
+}
+.tag.holding { background: #00d4aa20; color: #00d4aa; }
+.tag.watching { background: #ffb70020; color: #ffb700; }
+footer {
+    text-align: center; color: #556; font-size: 11px; margin-top: 40px;
+    padding-top: 20px; border-top: 1px solid #1a2a40;
+}
+</style>
+</head>
+<body>
+
+<h1>💼 投資 Dashboard | 黃樹榮</h1>
+<div class="subtitle">Sinotrade 9A91-0309038  •  最後更新 2026-08-06 14:04  •  加權指數 44396.70 (-0.48%)</div>
+
+<h2>💰 帳戶總覽</h2>
+<div class="grid">
+    <div class="card">
+        <div class="lbl">總資產</div>
+        <div class="val">NT$ 490,226</div>
+        <div class="sub">初始 NT$ 500,000</div>
+    </div>
+    <div class="card negative">
+        <div class="lbl">累計損益</div>
+        <div class="val negative">NT$ 9,774</div>
+        <div class="sub">-1.95%</div>
+    </div>
+    <div class="card">
+        <div class="lbl">現金</div>
+        <div class="val">NT$ 100,926</div>
+        <div class="sub">20.6% of equity</div>
+    </div>
+    <div class="card">
+        <div class="lbl">持股市值</div>
+        <div class="val">NT$ 389,300</div>
+        <div class="sub">2 檔標的</div>
+    </div>
+</div>
+
+<h2>🎯 今日提示</h2>
+<div class="tips">
+    <ul>
+    <li>🟡 <b>3231 緯創</b>：現價 189.50（+0.12%）→ 區間震盪，續持有</li>
+<li>🟡 <b>6770 力積電</b>：現價 66.60（-4.76%）→ 灰色地帶（62-70），續觀察　距硬停損 64.34 還有 3.4%</li>
+<li>🚨 <b>集中度警告</b>：3231 緯創 占帳戶 38.7%，超過 20% 上限</li>
+<li>🚨 <b>集中度警告</b>：6770 力積電 占帳戶 40.8%，超過 20% 上限</li>
+    </ul>
+</div>
+
+<h2>📦 目前持股</h2>
+<table>
+<thead>
+<tr>
+    <th>代號</th><th>名稱</th><th>張數</th><th>成本</th><th>現價</th>
+    <th>損益</th><th>%</th><th>占比</th><th>AI 建議</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><b>3231</b></td><td>緯創</td><td>1 張</td><td>189.28</td><td>189.50</td><td class='positive'>+220</td><td class='positive'>+0.12%</td><td>38.7%</td><td>🟡 區間震盪，續持有</td></tr>
+<tr><td><b>6770</b></td><td>力積電</td><td>3 張</td><td>69.93</td><td>66.60</td><td class='negative'>-9,990</td><td class='negative'>-4.76%</td><td>40.8%</td><td>🟡 灰色地帶（62-70），續觀察</td></tr>
+</tbody>
+</table>
+
+<h2>🏆 Watchlist Committee 排名</h2>
+<table>
+<thead>
+<tr>
+    <th>#</th><th>代號</th><th>名稱</th><th>Sharpe</th><th>年化</th>
+    <th>MDD</th><th>勝率</th><th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><b>1</b></td><td>2330</td><td>台積電</td><td>107.3</td><td class='positive'>+96.5%</td><td class='negative'>-12.4%</td><td>100%</td><td>⭐ 系統最愛</td></tr>
+<tr><td><b>2</b></td><td>2882</td><td>國泰金</td><td>27.4</td><td class='positive'>+46.9%</td><td class='negative'>-19.6%</td><td>100%</td><td>⭐ 防禦優等</td></tr>
+<tr><td><b>3</b></td><td>2382</td><td>廣達</td><td>24.4</td><td class='positive'>+52.5%</td><td class='negative'>-23.7%</td><td>85.7%</td><td>⚠️ 與 3231 同賽道</td></tr>
+<tr><td><b>4</b></td><td>NVDA</td><td>輝達</td><td>11.0</td><td class='positive'>+36.1%</td><td class='negative'>-22.5%</td><td>100%</td><td>美股霸主</td></tr>
+<tr><td><b>5</b></td><td>3231</td><td>緯創</td><td>8.6</td><td class='positive'>+16.5%</td><td class='negative'>-30.5%</td><td>100%</td><td>🟢 你有持有</td></tr>
+<tr><td><b>6</b></td><td>2603</td><td>長榮</td><td>6.2</td><td class='positive'>+11.9%</td><td class='negative'>-25.7%</td><td>100%</td><td>產業分散</td></tr>
+<tr><td><b>7</b></td><td>2301</td><td>光寶科</td><td>5.9</td><td class='positive'>+14.9%</td><td class='negative'>-31.5%</td><td>75%</td><td>波動較大</td></tr>
+<tr><td><b>8</b></td><td>2454</td><td>聯發科</td><td>4.5</td><td class='positive'>+10.6%</td><td class='negative'>-24.6%</td><td>75%</td><td>一般</td></tr>
+<tr><td><b>9</b></td><td>6770</td><td>力積電</td><td>2.8</td><td class='positive'>+7.6%</td><td class='negative'>-35.2%</td><td>75%</td><td>🚨 系統墊底，你有持有</td></tr>
+</tbody>
+</table>
+
+<h2>📈 Watchlist 即時報價</h2>
+<table>
+<thead>
+<tr>
+    <th>代號</th><th>名稱</th><th>現價</th><th>漲跌</th>
+    <th>今高</th><th>今低</th><th>量</th><th>狀態</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><b>3231</b></td><td>緯創</td><td>189.50</td><td class='negative'>-1.81%</td><td>199.00</td><td>188.00</td><td>82,240</td><td><span class='tag holding'>持有</span></td></tr>
+<tr><td><b>6770</b></td><td>力積電</td><td>66.60</td><td class='positive'>+0.75%</td><td>68.50</td><td>65.00</td><td>442,193</td><td><span class='tag holding'>持有</span></td></tr>
+<tr><td><b>2301</b></td><td>光寶科</td><td>252.50</td><td class='positive'>+1.40%</td><td>262.00</td><td>249.00</td><td>39,700</td><td><span class='tag watching'>觀察</span></td></tr>
+<tr><td><b>2330</b></td><td>台積電</td><td>2365.00</td><td class='negative'>-1.66%</td><td>2395.00</td><td>2360.00</td><td>22,762</td><td><span class='tag watching'>觀察</span></td></tr>
+<tr><td><b>2454</b></td><td>聯發科</td><td>3920.00</td><td class='negative'>-2.00%</td><td>4100.00</td><td>3905.00</td><td>6,728</td><td><span class='tag watching'>觀察</span></td></tr>
+<tr><td><b>2382</b></td><td>廣達</td><td>302.00</td><td class='negative'>-0.65%</td><td>305.00</td><td>299.00</td><td>13,353</td><td><span class='tag watching'>觀察</span></td></tr>
+<tr><td><b>2603</b></td><td>長榮</td><td>204.00</td><td class='negative'>-0.48%</td><td>205.50</td><td>202.00</td><td>3,678</td><td><span class='tag watching'>觀察</span></td></tr>
+<tr><td><b>2882</b></td><td>國泰金</td><td>97.50</td><td class='negative'>-2.98%</td><td>100.50</td><td>97.50</td><td>16,387</td><td><span class='tag watching'>觀察</span></td></tr>
+<tr><td><b>NVDA</b></td><td>NVDA</td><td>219.22</td><td class='positive'>+3.43%</td><td>222.22</td><td>216.40</td><td>157,555,300</td><td><span class='tag watching'>觀察</span></td></tr>
+</tbody>
+</table>
+
+<footer>
+    Generated by generate_my_dashboard.py  •  Powered by Shioaji + yfinance + AI Committee
+    <br>下次更新：cron 10:05 / 12:05 / 13:25（週一至週五）
+</footer>
+
+</body>
+</html>
