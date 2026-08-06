@@ -33,10 +33,11 @@ h2 {
 }
 .card::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: linear-gradient(90deg, #00d4aa, transparent);
+    background: linear-gradient(90deg, #00a8ff, transparent);
     border-radius: 12px 12px 0 0;
 }
-.card.negative::before { background: linear-gradient(90deg, #ff4757, transparent); }
+.card.positive::before { background: linear-gradient(90deg, #ff4757, transparent); }
+.card.negative::before { background: linear-gradient(90deg, #00d4aa, transparent); }
 .card.warning::before { background: linear-gradient(90deg, #ffb700, transparent); }
 .card .lbl {
     font-size: 10px; color: #667; text-transform: uppercase;
@@ -44,8 +45,9 @@ h2 {
 }
 .card .val { font-size: 24px; font-weight: 600; }
 .card .sub { font-size: 11px; color: #556; margin-top: 4px; }
-.positive { color: #00d4aa; }
-.negative { color: #ff4757; }
+/* 台股慣例：漲=紅、跌=綠 */
+.positive { color: #ff4757; }  /* 上漲/獲利 = 紅 */
+.negative { color: #00d4aa; }  /* 下跌/虧損 = 綠 */
 .warning { color: #ffb700; }
 table {
     width: 100%; border-collapse: collapse;
@@ -87,7 +89,7 @@ footer {
 <body>
 
 <h1>💼 投資 Dashboard | 黃樹榮</h1>
-<div class="subtitle">Sinotrade 9A91-0309038  •  最後更新 2026-08-06 14:51  •  加權指數 44396.70 (-0.48%)</div>
+<div class="subtitle">Sinotrade 9A91-0309038  •  最後更新 2026-08-06 15:02  •  加權指數 44396.70 (-0.48%)</div>
 
 <h2>💯 投資組合健康度</h2>
 <div class="grid">
